@@ -6,6 +6,8 @@ import Hero from '../components/home-page/hero';
 import { getFeaturedPosts } from '../lib/posts-util';
 
 function HomePage(props) {
+  const { posts } = props
+
   return (
     <Fragment>
       <Head>
@@ -16,7 +18,7 @@ function HomePage(props) {
         />
       </Head>
       <Hero />
-      <FeaturedPosts posts={props.posts} />
+      <FeaturedPosts posts={posts} />
     </Fragment>
   );
 }
